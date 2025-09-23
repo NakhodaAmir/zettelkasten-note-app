@@ -1,0 +1,19 @@
+:root {
+  --text-color : #e0def4;
+  --base-color: #191724;
+  --surface-color: #1f1d2e;
+  --error-color: #eb6f92;
+}
+
+html {
+  padding: 0;
+  border: 0;
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

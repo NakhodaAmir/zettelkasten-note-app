@@ -1,7 +1,12 @@
+import Editor from "./components/Editor";
+import NavBar from "./components/NavBar";
+import "./styles/App.css"
+
 function App() {
   return (
-    <main>
-      
+    <main className="app-container">
+      <NavBar />
+      <Editor />
     </main>
   );
 }
