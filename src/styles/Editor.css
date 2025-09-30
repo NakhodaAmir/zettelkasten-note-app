@@ -1,4 +1,23 @@
 #editor {
-  flex: 1;
   background: var(--base-color);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+#textarea.show {
+  background:transparent;
+  color: var(--text-color);
+  width: 50%;
+  height: 100%;
+}
+
+#textarea.hidden {
+  display: none;
+}
+
+.cm-scroller::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }

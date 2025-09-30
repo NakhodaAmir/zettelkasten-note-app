@@ -1,19 +1,36 @@
 :root {
-  --text-color : #e0def4;
+  --text-color: #e0def4;
   --base-color: #191724;
   --surface-color: #1f1d2e;
   --error-color: #eb6f92;
 }
 
-html {
+html,
+body {
   padding: 0;
-  border: 0;
+  border: none;
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 .app-container {
   height: 100vh;
+  display: grid;
+  grid-template-rows: 2.5rem 2rem 1fr;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: transparent;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

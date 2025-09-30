@@ -1,0 +1,36 @@
+#toolbar {
+  background-color: var(--base-color);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0 1rem;
+}
+
+#title > textarea {
+  height: 1rem;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  resize: none;
+  outline: none;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+#title > textarea::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#buttons> button {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.25rem;
+  margin: 0.25rem;
+}
+
+#buttons > button > svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: var(--text-color);
+}
