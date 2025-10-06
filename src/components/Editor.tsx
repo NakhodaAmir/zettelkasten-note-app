@@ -5,10 +5,10 @@ import { EditorState } from "@codemirror/state";
 import { markdown } from "@codemirror/lang-markdown";
 import { useRef, useEffect, useState } from "react";
 import Markdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
-import remarkBreaks from "remark-breaks"
 import theme from "./codemirror_plugins/theme";
-import "../styles/Editor.css"
+import "../styles/Editor.css";
 import { headerPreview } from "./codemirror_plugins/PreviewExtensions";
 
 function Editor({ preview }: { preview: boolean }) {
@@ -50,7 +50,7 @@ function Editor({ preview }: { preview: boolean }) {
   return (
     <div id="editor">
       <div id="textarea" ref={textarea} tabIndex={0} className={preview ? ("hidden") : ("show")}></div>
-      {preview && <Markdown remarkPlugins={[remarkGfm]}>{markdownText}</Markdown>}
+      {preview && <div className="markdown"><Markdown remarkPlugins={[remarkGfm, remarkBreaks]}>{markdownText}</Markdown></div>}
     </div>
   );
 }
